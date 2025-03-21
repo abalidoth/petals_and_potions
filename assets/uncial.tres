@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bje3v5nx1eag"]
+
+[ext_resource type="FontFile" uid="uid://c2uduu18ychts" path="res://assets/Uncial_WIP.ttf" id="1_vhrua"]
+
+[resource]
+default_font = ExtResource("1_vhrua")
+default_font_size = 32

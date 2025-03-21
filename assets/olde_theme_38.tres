@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ccudai7lxeo1b"]
+
+[ext_resource type="FontFile" uid="uid://bywkt3svt374f" path="res://assets/OldeTome.ttf" id="1_jidkd"]
+
+[resource]
+default_font = ExtResource("1_jidkd")
+default_font_size = 38

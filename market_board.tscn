@@ -1,0 +1,372 @@
+[gd_scene load_steps=3 format=3 uid="uid://l8p3ypsx586j"]
+
+[ext_resource type="Theme" uid="uid://bje3v5nx1eag" path="res://assets/uncial.tres" id="1_cf4my"]
+[ext_resource type="Script" uid="uid://vkwcrjg7e6gf" path="res://market_board.gd" id="1_nenwu"]
+
+[node name="MarketBoard" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -124.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_cf4my")
+script = ExtResource("1_nenwu")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Market Prices"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Potion"
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Ingredients"
+
+[node name="Label5" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Price"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Trend"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Potion1" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+mouse_filter = 0
+text = "Inner Warmth"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "F"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer"]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+text = "N"
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer"]
+modulate = Color(0, 0, 1, 1)
+layout_mode = 2
+text = "W"
+
+[node name="Price1" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10G"
+horizontal_alignment = 1
+
+[node name="Change1" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "V"
+horizontal_alignment = 1
+
+[node name="Potion2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+mouse_filter = 0
+text = "Brute Strength"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer2"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "F"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer2"]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+text = "N"
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer2"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+text = "E"
+
+[node name="Price2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10G"
+horizontal_alignment = 1
+
+[node name="Change2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "V"
+horizontal_alignment = 1
+
+[node name="Potion3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+mouse_filter = 0
+text = "Steam Breath"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer3"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "F"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer3"]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 2
+text = "M"
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer3"]
+modulate = Color(0, 0, 1, 1)
+layout_mode = 2
+text = "W"
+
+[node name="Price3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10G"
+horizontal_alignment = 1
+
+[node name="Change3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "V"
+horizontal_alignment = 1
+
+[node name="Potion4" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+mouse_filter = 0
+text = "Smoke Aura"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer4"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+text = "F"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer4"]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 2
+text = "M"
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer4"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+text = "E"
+
+[node name="Price4" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10G"
+horizontal_alignment = 1
+
+[node name="Change4" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "V"
+horizontal_alignment = 1
+
+[node name="Potion5" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+mouse_filter = 0
+text = "Great Stamina"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer5"]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 2
+text = "I"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer5"]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+text = "N"
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer5"]
+modulate = Color(0, 0, 1, 1)
+layout_mode = 2
+text = "W"
+
+[node name="Price5" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10G"
+horizontal_alignment = 1
+
+[node name="Change5" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "V"
+horizontal_alignment = 1
+
+[node name="Potion6" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+mouse_filter = 0
+text = "Stone Skin"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer6"]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 2
+text = "I"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer6"]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 2
+text = "N"
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer6"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+text = "E"
+
+[node name="Price6" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10G"
+horizontal_alignment = 1
+
+[node name="Change6" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "V"
+horizontal_alignment = 1
+
+[node name="Potion7" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+mouse_filter = 0
+text = "Vapor Form"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer7"]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 2
+text = "I"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer7"]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 2
+text = "M"
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer7"]
+modulate = Color(0, 0, 1, 1)
+layout_mode = 2
+text = "W"
+
+[node name="Price7" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10G"
+horizontal_alignment = 1
+
+[node name="Change7" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "V"
+horizontal_alignment = 1
+
+[node name="Potion8" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+mouse_filter = 0
+text = "Ice Shell"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="PanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer8"]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 2
+text = "I"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer8"]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 2
+text = "M"
+
+[node name="Label3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer/HBoxContainer8"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+text = "E"
+
+[node name="Price8" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10G"
+horizontal_alignment = 1
+
+[node name="Change8" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "V"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/GridContainer/Potion1" to="." method="_on_potion_1_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer/VBoxContainer/GridContainer/Potion1" to="." method="_on_potion_1_mouse_exited"]
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/GridContainer/Potion2" to="." method="_on_potion_2_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer/VBoxContainer/GridContainer/Potion2" to="." method="_on_potion_2_mouse_exited"]
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/GridContainer/Potion3" to="." method="_on_potion_3_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer/VBoxContainer/GridContainer/Potion3" to="." method="_on_potion_3_mouse_exited"]
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/GridContainer/Potion4" to="." method="_on_potion_4_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer/VBoxContainer/GridContainer/Potion4" to="." method="_on_potion_4_mouse_exited"]
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/GridContainer/Potion5" to="." method="_on_potion_5_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer/VBoxContainer/GridContainer/Potion5" to="." method="_on_potion_5_mouse_exited"]
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/GridContainer/Potion6" to="." method="_on_potion_6_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer/VBoxContainer/GridContainer/Potion6" to="." method="_on_potion_6_mouse_exited"]
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/GridContainer/Potion7" to="." method="_on_potion_7_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer/VBoxContainer/GridContainer/Potion7" to="." method="_on_potion_7_mouse_exited"]
+[connection signal="mouse_entered" from="PanelContainer/VBoxContainer/GridContainer/Potion8" to="." method="_on_potion_8_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer/VBoxContainer/GridContainer/Potion8" to="." method="_on_potion_8_mouse_exited"]

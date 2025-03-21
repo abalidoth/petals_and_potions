@@ -1,0 +1,343 @@
+[gd_scene load_steps=5 format=4 uid="uid://cge2572gj83mj"]
+
+[ext_resource type="Script" uid="uid://b5surcammr3oh" path="res://playfield.gd" id="1_s8ler"]
+[ext_resource type="TileSet" uid="uid://fbb0w786l7mf" path="res://playfield.tres" id="2_s8ler"]
+[ext_resource type="PackedScene" uid="uid://l8p3ypsx586j" path="res://market_board.tscn" id="4_s8ler"]
+[ext_resource type="Theme" uid="uid://bje3v5nx1eag" path="res://assets/uncial.tres" id="7_xssgh"]
+
+[node name="Playfield" type="Node2D"]
+script = ExtResource("1_s8ler")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(263, 171)
+tile_map_data = PackedByteArray("AAD/////AgABAAAAAAD///7/AgABAAAAAAAAAP7/AgADAAAAAAAAAP//AgAAAAAAAAAAAAAAAgACAAAAAAD//wAAAgABAAAAAAD+////AgABAAAAAAD+//7/AgABAAAAAAD+//3/AwABAAAAAAD9////AgAAAAAAAAD+/wAAAgAAAAAAAAD+/wEAAgADAAAAAAD//wEAAgABAAAAAAAAAAEAAgACAAAAAAABAAAAAgADAAAAAAABAP//AgACAAAAAAABAP7/AgAAAAAAAAAAAP3/AgAAAAAAAAD///3/AgADAAAAAAD+//z/AwAAAAAAAAD///z/AwABAAAAAAAAAPz/AgADAAAAAAABAPz/AgADAAAAAAABAP3/AgAAAAAAAAACAP7/AgADAAAAAAACAP//AgACAAAAAAACAAAAAgAAAAAAAAABAAEAAgADAAAAAAABAAIAAgABAAAAAAAAAAIAAgACAAAAAAD//wIAAgACAAAAAAD+/wIAAgADAAAAAAD9/wEAAgAAAAAAAAD9/wAAAgADAAAAAAD8////AwAAAAAAAAD9//7/AwAAAAAAAAD9//3/AwACAAAAAAD9//v/AwABAAAAAAD+//v/AwADAAAAAAD///v/AwABAAAAAAAAAPv/AwABAAAAAAABAPv/AwAAAAAAAAACAPz/AgADAAAAAAACAP3/AgACAAAAAAADAP7/AgACAAAAAAADAP//AgADAAAAAAADAAAAAgACAAAAAAACAAEAAgABAAAAAAACAAIAAgACAAAAAAABAAMAAgAAAAAAAAAAAAMAAgABAAAAAAD//wMAAgABAAAAAAD+/wMAAgACAAAAAAD9/wMAAgADAAAAAAD9/wIAAgAAAAAAAAD8/wEAAgABAAAAAAD8/wAAAgADAAAAAAD7////AwADAAAAAAD8//7/AwACAAAAAAD8//3/AwABAAAAAAD9//z/AwADAAAAAAD6////AQAAAAAAAAD7//7/AQAAAAAAAAD7//3/AQAAAAAAAAD8//z/AQAAAAAAAAD8//v/AQAAAAAAAAD9//r/AwADAAAAAAD+//r/AwAAAAAAAAD///r/AwADAAAAAAAAAPr/AwADAAAAAAABAPr/AwADAAAAAAACAPr/AwADAAAAAAACAAQAAwADAAAAAAABAAQAAwADAAAAAAAAAAQAAgABAAAAAAD//wQAAgABAAAAAAD+/wQAAgADAAAAAAD9/wQAAgACAAAAAAD8/wMAAgADAAAAAAD8/wIAAgABAAAAAAD7/wEAAwABAAAAAAD7/wAAAwABAAAAAAACAPv/AwAAAAAAAAADAPz/AgACAAAAAAADAP3/AgABAAAAAAAEAP7/AgADAAAAAAAEAP//AgABAAAAAAAEAAAAAgACAAAAAAADAAEAAgABAAAAAAADAAIAAwADAAAAAAACAAMAAwABAAAAAAD8//r/AwADAAAAAAD7//r/AQAAAAAAAAD6//r/AQAAAAAAAAD6//v/AQAAAAAAAAD7//v/AQAAAAAAAAD7//z/AQAAAAAAAAD6//z/AQAAAAAAAAD6//3/AQAAAAAAAAD6//7/AQAAAAAAAAD6/wAAAQAAAAAAAAD6/wEAAwADAAAAAAD7/wIAAwABAAAAAAD7/wMAAwAAAAAAAAD8/wQAAgACAAAAAAD6/wIAAwADAAAAAAD6/wMAAwADAAAAAAD7/wQAAwABAAAAAAD6/wQAAwAAAAAAAAADAPr/AwAAAAAAAAADAPv/AwACAAAAAAAEAPr/AwABAAAAAAAEAPz/AgAAAAAAAAAEAPv/AwACAAAAAAAEAP3/AgACAAAAAAAEAAEAAwACAAAAAAAEAAIAAwAAAAAAAAADAAMAAwABAAAAAAADAAQAAwAAAAAAAAAEAAMAAwABAAAAAAAEAAQAAwABAAAAAAD5////AQAAAAAAAAD4/wAAAQAAAAAAAAD4/wEAAQAAAAAAAAD4/wIAAQAAAAAAAAD3/wMAAQAAAAAAAAD3/wQAAQAAAAAAAAD2/wUAAQAAAAAAAAD2/wYAAQAAAAAAAAD3/wUAAQAAAAAAAAD4/wQAAQAAAAAAAAD5/wMAAwAAAAAAAAD5/wIAAQAAAAAAAAD4/wMAAQAAAAAAAAD5/wEAAQAAAAAAAAD5/wAAAQAAAAAAAAD5//7/AQAAAAAAAAD5/wQAAwACAAAAAAD6/wUAAwACAAAAAAD7/wUAAwADAAAAAAD8/wUAAwABAAAAAAD9/wUAAwABAAAAAAAFAPr/AwABAAAAAAAGAPn/AwAAAAAAAAAGAPr/AwAAAAAAAAAGAPv/AwACAAAAAAAFAPz/AwACAAAAAAAFAP3/AwAAAAAAAAAEAPn/AwAAAAAAAAAFAPv/AwADAAAAAAAFAP7/AwACAAAAAAAFAP//AwAAAAAAAAAFAAAAAwABAAAAAAAGAP//AwABAAAAAAAGAP7/AwADAAAAAAAGAP3/AwADAAAAAAAHAPz/AwACAAAAAAAGAPz/AwADAAAAAAD+/wUAAwAAAAAAAAD//wUAAwADAAAAAAAAAAUAAwACAAAAAAABAAUAAwACAAAAAAAFAAEAAwAAAAAAAAD5/wUAAwABAAAAAAD5/wYAAwADAAAAAAD6/wYAAwADAAAAAAD7/wYAAwACAAAAAAD8/wYAAwADAAAAAAD9/wYAAwACAAAAAAD+/wYAAwACAAAAAAD//wYAAwAAAAAAAAAAAAYAAwAAAAAAAAABAAYAAwADAAAAAAACAAYAAwACAAAAAAADAAYAAwADAAAAAAACAAcAAwACAAAAAAABAAcAAwACAAAAAAAAAAcAAwAAAAAAAAD//wcAAwAAAAAAAAD+/wcAAwABAAAAAAD5/wcAAwACAAAAAAD6/wcAAwAAAAAAAAD7/wcAAwADAAAAAAD8/wcAAwACAAAAAAD9/wcAAwACAAAAAAD4/wcAAwACAAAAAAD4/wYAAwADAAAAAAD///n/AwABAAAAAAAAAPj/AwACAAAAAAAAAPf/AwABAAAAAAD///j/AwADAAAAAAABAPf/AwACAAAAAAABAPj/AwADAAAAAAACAPf/AwADAAAAAAACAPj/AwABAAAAAAADAPf/AwACAAAAAAAEAPf/AwABAAAAAAAFAPf/AwACAAAAAAAGAPf/AwACAAAAAAAHAPf/AwACAAAAAAAIAPf/AwADAAAAAAAJAPf/AwABAAAAAAAKAPf/AwACAAAAAAAJAPj/AwABAAAAAAAIAPj/AwAAAAAAAAAHAPj/AwAAAAAAAAAGAPj/AwABAAAAAAAFAPn/AwABAAAAAAADAPn/AwADAAAAAAACAPn/AwAAAAAAAAABAPn/AwACAAAAAAAAAPn/AwACAAAAAAD+//n/AwACAAAAAAD9//n/AwADAAAAAAADAPj/AwABAAAAAAAEAPj/AwACAAAAAAAFAPj/AwADAAAAAAAJAPn/AwACAAAAAAAKAPn/AwACAAAAAAALAPn/AwABAAAAAAAMAPn/AwADAAAAAAANAPj/AwAAAAAAAAAOAPj/AwACAAAAAAAOAPn/AwAAAAAAAAAPAPj/AwABAAAAAAAPAPn/AwACAAAAAAAQAPj/AwAAAAAAAAAQAPn/AwABAAAAAAARAPj/AwAAAAAAAAAMAPj/AwAAAAAAAAALAPj/AwABAAAAAAAKAPj/AwADAAAAAAAOAPf/AwACAAAAAAAPAPf/AwADAAAAAAAQAPf/AwAAAAAAAAARAPf/AwACAAAAAAASAPf/AwACAAAAAAATAPf/AwADAAAAAAAMAPf/AwABAAAAAAALAPf/AwABAAAAAAANAPf/AwACAAAAAAAIAPn/AwABAAAAAAAHAPn/AwACAAAAAAANAPn/AwAAAAAAAAARAPn/AwABAAAAAAASAPn/AwAAAAAAAAAPAPr/AwADAAAAAAAOAPr/AwAAAAAAAAANAPr/AwAAAAAAAAAMAPr/AwACAAAAAAALAPr/AwABAAAAAAAKAPr/AwADAAAAAAAJAPr/AwADAAAAAAAIAPr/AwADAAAAAAAHAPr/AwAAAAAAAAAHAPv/AwADAAAAAAAIAPz/AwADAAAAAAAJAPz/AwACAAAAAAAKAPv/AwACAAAAAAAKAPz/AwACAAAAAAALAPv/AwABAAAAAAAMAPv/AwAAAAAAAAANAPv/AwABAAAAAAAOAPv/AwADAAAAAAAOAPz/AwAAAAAAAAAPAPv/AwACAAAAAAAPAPz/AwADAAAAAAANAPz/AwADAAAAAAAMAPz/AwAAAAAAAAAJAPv/AwAAAAAAAAAIAPv/AwADAAAAAAAQAPr/AwAAAAAAAAAQAPv/AwAAAAAAAAARAPr/AwADAAAAAAAOAP3/AwACAAAAAAAPAP3/AwADAAAAAAAOAP7/AwABAAAAAAANAP7/AwABAAAAAAANAP3/AwAAAAAAAAAMAP3/AwAAAAAAAAALAP3/AwADAAAAAAALAPz/AwADAAAAAAAKAP3/AwACAAAAAAAJAP3/AwADAAAAAAAIAP3/AwAAAAAAAAAHAP3/AwADAAAAAAAHAP7/AwACAAAAAAAHAP//AwADAAAAAAAIAP//AwADAAAAAAAIAP7/AwACAAAAAAAJAP7/AwACAAAAAAAJAP//AwABAAAAAAAKAP7/AwAAAAAAAAALAP7/AwACAAAAAAAMAP7/AwAAAAAAAAAOAP//AwADAAAAAAAOAAAAAwAAAAAAAAANAAAAAwACAAAAAAAMAAEAAwADAAAAAAALAAEAAwACAAAAAAAKAAEAAwABAAAAAAAKAAAAAwADAAAAAAAJAAAAAwACAAAAAAAIAAAAAwACAAAAAAAHAAAAAwADAAAAAAAGAAAAAwADAAAAAAAGAAEAAwAAAAAAAAAHAAEAAwABAAAAAAAIAAEAAwACAAAAAAAJAAEAAwADAAAAAAANAAEAAwAAAAAAAAAMAAIAAwADAAAAAAANAAIAAwABAAAAAAAMAAMAAwACAAAAAAALAAMAAwADAAAAAAAKAAMAAwACAAAAAAAJAAMAAwADAAAAAAAIAAMAAwABAAAAAAAHAAMAAwABAAAAAAAGAAMAAwACAAAAAAAFAAMAAwAAAAAAAAAFAAIAAwABAAAAAAAGAAIAAwADAAAAAAAHAAIAAwADAAAAAAAIAAIAAwADAAAAAAAJAAIAAwAAAAAAAAAKAAIAAwAAAAAAAAALAAIAAwAAAAAAAAANAAMAAwADAAAAAAAMAAQAAwADAAAAAAALAAUAAwAAAAAAAAAKAAUAAwABAAAAAAALAAQAAwABAAAAAAAKAAQAAwADAAAAAAAJAAQAAwACAAAAAAAIAAQAAwABAAAAAAAHAAQAAwABAAAAAAAGAAQAAwADAAAAAAAFAAQAAwACAAAAAAADAAUAAwADAAAAAAAEAAUAAwABAAAAAAAFAAUAAwACAAAAAAAGAAUAAwAAAAAAAAAHAAUAAwABAAAAAAAIAAUAAwAAAAAAAAAIAAYAAwAAAAAAAAAJAAUAAwADAAAAAAALAAYAAwABAAAAAAAMAAUAAwAAAAAAAAAGAAYAAwAAAAAAAAACAAUAAwADAAAAAAAEAAYAAwADAAAAAAAFAAYAAwABAAAAAAAHAAYAAwABAAAAAAAJAAYAAwACAAAAAAAKAAYAAwADAAAAAAALAAcAAwADAAAAAAAKAAcAAwACAAAAAAAJAAcAAwAAAAAAAAAIAAcAAwABAAAAAAAHAAcAAwAAAAAAAAAGAAcAAwABAAAAAAAFAAcAAwADAAAAAAAEAAcAAwADAAAAAAADAAcAAwAAAAAAAAABAPb/AwABAAAAAAD//wgAAwAAAAAAAAAKAP//AwAAAAAAAAALAP//AwACAAAAAAAMAP//AwABAAAAAAANAP//AwACAAAAAAALAAAAAwABAAAAAAAMAAAAAwACAAAAAAD5/wgAAwACAAAAAAD4/wgAAwACAAAAAAD3/wkAAwABAAAAAAD3/woAAwAAAAAAAAD2/wsAAwADAAAAAAD2/woAAwACAAAAAAD3/wgAAwABAAAAAAD3/wsAAwACAAAAAAD4/woAAwACAAAAAAD5/woAAwAAAAAAAAD6/woAAwACAAAAAAD7/woAAwABAAAAAAD7/wsAAwADAAAAAAD8/wsAAwADAAAAAAD9/wsAAwAAAAAAAAD+/wsAAwADAAAAAAD//wsAAwAAAAAAAAAAAAsAAwADAAAAAAABAAsAAwAAAAAAAAACAAsAAwABAAAAAAADAAsAAwAAAAAAAAAEAAsAAwABAAAAAAAFAAsAAwAAAAAAAAAGAAsAAwADAAAAAAAHAAsAAwACAAAAAAAIAAsAAwAAAAAAAAAJAAsAAwADAAAAAAAKAAsAAwACAAAAAAALAAsAAwAAAAAAAAALAAoAAwADAAAAAAAKAAoAAwACAAAAAAAKAAkAAwAAAAAAAAAJAAkAAwAAAAAAAAAKAAgAAwADAAAAAAAJAAgAAwADAAAAAAAIAAkAAwADAAAAAAAIAAoAAwACAAAAAAAHAAoAAwACAAAAAAAIAAgAAwAAAAAAAAAHAAkAAwACAAAAAAAGAAoAAwAAAAAAAAAGAAkAAwADAAAAAAAHAAgAAwADAAAAAAAFAAoAAwADAAAAAAAEAAoAAwABAAAAAAAFAAkAAwABAAAAAAAGAAgAAwADAAAAAAAFAAgAAwADAAAAAAAEAAkAAwAAAAAAAAADAAoAAwADAAAAAAADAAkAAwAAAAAAAAAEAAgAAwADAAAAAAACAAoAAwADAAAAAAABAAoAAwACAAAAAAAAAAoAAwABAAAAAAABAAkAAwABAAAAAAACAAgAAwABAAAAAAAAAAkAAwAAAAAAAAD//woAAwAAAAAAAAD+/woAAwABAAAAAAACAAkAAwAAAAAAAAADAAgAAwAAAAAAAAABAAgAAwACAAAAAAD//wkAAwADAAAAAAAAAAgAAwAAAAAAAAD+/wgAAwAAAAAAAAD9/wkAAwACAAAAAAD8/wkAAwABAAAAAAD+/wkAAwAAAAAAAAD8/woAAwADAAAAAAD9/woAAwADAAAAAAD7/wkAAwAAAAAAAAD6/wkAAwABAAAAAAD5/wkAAwACAAAAAAD4/wkAAwAAAAAAAAD6/wgAAwABAAAAAAD7/wgAAwABAAAAAAD8/wgAAwAAAAAAAAD9/wgAAwAAAAAAAAD4/wsAAwABAAAAAAD5/wsAAwACAAAAAAD6/wsAAwADAAAAAAAJAAoAAwABAAAAAAA=")
+tile_set = ExtResource("2_s8ler")
+
+[node name="Plants" type="Node2D" parent="."]
+
+[node name="MarketBoard" parent="." instance=ExtResource("4_s8ler")]
+unique_name_in_owner = true
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 718.0
+offset_top = 2.0
+offset_right = 758.0
+offset_bottom = 2.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="ScoreBoard" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 743.0
+offset_top = 481.0
+offset_right = 784.0
+offset_bottom = 521.0
+theme = ExtResource("7_xssgh")
+
+[node name="PanelContainer" type="PanelContainer" parent="ScoreBoard"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScoreBoard/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScoreBoard/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScoreBoard/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScoreBoard/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Current Score"
+
+[node name="CurrentScore" type="Label" parent="ScoreBoard/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="ScoreBoard/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScoreBoard/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScoreBoard/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Week"
+
+[node name="WeekLabel" type="Label" parent="ScoreBoard/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1
+/20"
+horizontal_alignment = 1
+
+[node name="PassTimeButton" type="Button" parent="ScoreBoard/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "NEXT WEEK [SPC]"
+
+[node name="BrewTip" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 146.0
+offset_top = 403.0
+offset_right = 448.0
+offset_bottom = 623.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme = ExtResource("7_xssgh")
+
+[node name="CenterContainer" type="VBoxContainer" parent="BrewTip"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BrewTip/CenterContainer"]
+layout_mode = 2
+
+[node name="PrimaryBox" type="VBoxContainer" parent="BrewTip/CenterContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Fire"
+
+[node name="FireProgress" type="ProgressBar" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox/HBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+rounded = true
+allow_greater = true
+fill_mode = 1
+show_percentage = false
+
+[node name="FireProgressLabel" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox/HBoxContainer/FireProgress"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Nature"
+
+[node name="NatureProgress" type="ProgressBar" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox/HBoxContainer2"]
+unique_name_in_owner = true
+modulate = Color(0, 1, 0, 1)
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+rounded = true
+fill_mode = 1
+show_percentage = false
+
+[node name="NatureProgressLabel" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox/HBoxContainer2/NatureProgress"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.431373, 0.423529, 1, 1)
+text = "Water"
+
+[node name="WaterProgress" type="ProgressBar" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox/HBoxContainer3"]
+unique_name_in_owner = true
+modulate = Color(0, 0, 1, 1)
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+rounded = true
+fill_mode = 1
+show_percentage = false
+
+[node name="WaterProgressLabel" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/PrimaryBox/HBoxContainer3/WaterProgress"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="SecondaryBox" type="VBoxContainer" parent="BrewTip/CenterContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox"]
+layout_mode = 2
+
+[node name="IceProgress" type="ProgressBar" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(0, 0.780392, 0.745098, 1)
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 1
+rounded = true
+show_percentage = false
+
+[node name="IceProgressLabel" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer/IceProgress"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.956863, 1, 1)
+text = "Ice"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox"]
+layout_mode = 2
+
+[node name="MagicProgress" type="ProgressBar" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer2"]
+unique_name_in_owner = true
+modulate = Color(0.686275, 0, 0.678431, 1)
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 1
+rounded = true
+show_percentage = false
+
+[node name="MagicProgressLabel" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer2/MagicProgress"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+text = "Magic"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox"]
+layout_mode = 2
+
+[node name="EarthProgress" type="ProgressBar" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer3"]
+unique_name_in_owner = true
+modulate = Color(0.752941, 0.729412, 0, 1)
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_vertical = 1
+rounded = true
+show_percentage = false
+
+[node name="EarthProgressLabel" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer3/EarthProgress"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="BrewTip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "Earth"
+
+[node name="ScoreSummary" type="HBoxContainer" parent="BrewTip/CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BrewTip/CenterContainer/ScoreSummary"]
+layout_mode = 2
+
+[node name="Multiplier" type="Label" parent="BrewTip/CenterContainer/ScoreSummary/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="BrewTip/CenterContainer/ScoreSummary/VBoxContainer"]
+layout_mode = 2
+text = "Multiplier"
+
+[node name="X" type="Label" parent="BrewTip/CenterContainer/ScoreSummary"]
+layout_mode = 2
+text = "X"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="BrewTip/CenterContainer/ScoreSummary"]
+layout_mode = 2
+
+[node name="BasePrice" type="Label" parent="BrewTip/CenterContainer/ScoreSummary/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="BrewTip/CenterContainer/ScoreSummary/VBoxContainer2"]
+layout_mode = 2
+text = "Base"
+
+[node name="Label" type="Label" parent="BrewTip/CenterContainer/ScoreSummary"]
+layout_mode = 2
+text = "="
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="BrewTip/CenterContainer/ScoreSummary"]
+layout_mode = 2
+
+[node name="Total" type="Label" parent="BrewTip/CenterContainer/ScoreSummary/VBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="BrewTip/CenterContainer/ScoreSummary/VBoxContainer3"]
+layout_mode = 2
+text = "Total"
+
+[node name="BrewButton" type="Button" parent="BrewTip/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "BREW [RMB]"
+
+[connection signal="potion_hovered" from="MarketBoard" to="." method="_on_market_board_potion_hovered"]
+[connection signal="potion_unhovered" from="MarketBoard" to="." method="_on_market_board_potion_unhovered"]
+[connection signal="pressed" from="ScoreBoard/PanelContainer/VBoxContainer/PassTimeButton" to="." method="_on_pass_time_button_pressed"]
+[connection signal="pressed" from="BrewTip/CenterContainer/BrewButton" to="." method="_on_brew_button_pressed"]

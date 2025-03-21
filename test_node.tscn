@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2avgslxeg8hw"]
+
+[ext_resource type="PackedScene" uid="uid://brw1qj2i2c2d6" path="res://plant.tscn" id="1_6uery"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Plant" parent="." instance=ExtResource("1_6uery")]
+position = Vector2(118, 82)
+scale = Vector2(5, 5)
