@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://l8p3ypsx586j"]
 
-[ext_resource type="Theme" uid="uid://bje3v5nx1eag" path="res://assets/uncial.tres" id="1_cf4my"]
 [ext_resource type="Script" uid="uid://vkwcrjg7e6gf" path="res://market_board.gd" id="1_nenwu"]
+[ext_resource type="Theme" uid="uid://la0l0jlvrh3d" path="res://assets/alagard_theme.tres" id="1_wolg5"]
 
 [node name="MarketBoard" type="Control"]
 texture_filter = 1
@@ -15,7 +15,7 @@ offset_right = -124.0
 offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_cf4my")
+theme = ExtResource("1_wolg5")
 script = ExtResource("1_nenwu")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -93,12 +93,14 @@ text = "W"
 [node name="Price1" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "10G"
 horizontal_alignment = 1
 
 [node name="Change1" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "V"
 horizontal_alignment = 1
 
@@ -129,12 +131,14 @@ text = "E"
 [node name="Price2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "10G"
 horizontal_alignment = 1
 
 [node name="Change2" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "V"
 horizontal_alignment = 1
 
@@ -165,12 +169,14 @@ text = "W"
 [node name="Price3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "10G"
 horizontal_alignment = 1
 
 [node name="Change3" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "V"
 horizontal_alignment = 1
 
@@ -201,12 +207,14 @@ text = "E"
 [node name="Price4" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "10G"
 horizontal_alignment = 1
 
 [node name="Change4" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "V"
 horizontal_alignment = 1
 
@@ -237,12 +245,14 @@ text = "W"
 [node name="Price5" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "10G"
 horizontal_alignment = 1
 
 [node name="Change5" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "V"
 horizontal_alignment = 1
 
@@ -273,12 +283,14 @@ text = "E"
 [node name="Price6" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "10G"
 horizontal_alignment = 1
 
 [node name="Change6" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "V"
 horizontal_alignment = 1
 
@@ -309,12 +321,14 @@ text = "W"
 [node name="Price7" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "10G"
 horizontal_alignment = 1
 
 [node name="Change7" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "V"
 horizontal_alignment = 1
 
@@ -345,12 +359,14 @@ text = "E"
 [node name="Price8" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 text = "10G"
 horizontal_alignment = 1
 
 [node name="Change8" type="Label" parent="PanelContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "V"
 horizontal_alignment = 1
 

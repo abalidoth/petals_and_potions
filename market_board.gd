@@ -21,10 +21,10 @@ func set_prices() -> void:
 		var change_node = get_node("%Change"+str(i+1))
 		price_node.text = "%.2f"%current_prices[i]
 		if next_prices[i]>current_prices[i]:
-			change_node.text = "▲"
+			change_node.text = "up"
 			change_node.modulate = Color(0,1,0)
 		else:
-			change_node.text = "▼"
+			change_node.text = "down"
 			change_node.modulate = Color(1,0,0)
 			
 

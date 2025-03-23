@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ctrj55m5wl4ik"]
+
+[ext_resource type="FontFile" uid="uid://c62s1tmecsuxk" path="res://assets/OpenSans-VariableFont_wdth,wght.ttf" id="1_4smbd"]
+
+[resource]
+default_font = ExtResource("1_4smbd")

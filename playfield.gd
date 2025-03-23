@@ -51,6 +51,7 @@ func make_new_plant(tile:Vector3i, genes: Vector3) -> void:
 	new_plant.plant_clicked.connect(_on_plant_clicked)
 
 func _ready() -> void:
+	$Music.play()
 	generate_field()
 	for tile in all_tiles:
 		var new_genes = Vector3(
@@ -62,7 +63,7 @@ func _ready() -> void:
 		if rng.randf()<0.5:
 			plants[tile].grow_up()
 	brew_disable()
-	%WeekLabel.text = "1\n/20"
+	%WeekLabel.text = "1\n/15"
 		
 func _on_plant_clicked(tile:Vector3i) -> void:
 	if tile in selected_plants:
@@ -81,7 +82,7 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
 		if len(selected_plants)==2:
 			_on_brew_button_pressed()
-	elif event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
+	elif event is InputEventKey and event.pressed and not event.is_echo() and event.keycode == KEY_SPACE:
 		_on_pass_time_button_pressed()
 
 
@@ -158,6 +159,7 @@ func brew_potion() -> void:
 	plants.erase(plant_a)
 	plants.erase(plant_b)
 	selected_plants = []
+	%Bubble.play()
 	
 func _on_brew_button_pressed():
 	brew_potion()
@@ -170,7 +172,11 @@ func _on_pass_time_button_pressed():
 
 func pass_time():
 	week += 1
-	%WeekLabel.text = str(week) + "\n/20"
+	if week == 16:
+		%GameOverScreen.visible=true
+		%GameOverScore.text = "Score: %.2f"%score
+		return
+	%WeekLabel.text = str(week) + "\n/15"
 	$MarketBoard.update_prices()
 	for tile in all_tiles:
 		if tile not in plants:
@@ -224,3 +230,15 @@ func _on_market_board_potion_unhovered(fire_ice, nature_magic, water_earth):
 			not this_plant.baby
 		):
 			this_plant.stop_highlight()
+
+
+
+
+
+func _on_button_pressed():
+	$ColorRect.visible=false
+
+
+func _on_game_over_screen_gui_input(event):
+	if event is InputEventMouseButton and event.pressed:
+		get_tree().change_scene_to_file("res://main_menu.tscn")

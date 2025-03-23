@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://doxljhljlde6i"]
+
+[ext_resource type="Script" uid="uid://bfeatydlv8tk4" path="res://credits.gd" id="1_nm7lk"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_nm7lk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 456.0
+offset_top = 204.0
+offset_right = 496.0
+offset_bottom = 227.0
+text = "An AMCR Studio Jam Game
+
+For Godot Wild Jam #79 \"Growing\"
+Design/Code/Art: Tesseract King
+Playtest: Heather Costello
+Music by plasterbrain on Freesound"

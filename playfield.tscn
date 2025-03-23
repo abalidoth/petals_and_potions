@@ -1,9 +1,20 @@
-[gd_scene load_steps=5 format=4 uid="uid://cge2572gj83mj"]
+[gd_scene load_steps=11 format=4 uid="uid://cge2572gj83mj"]
 
 [ext_resource type="Script" uid="uid://b5surcammr3oh" path="res://playfield.gd" id="1_s8ler"]
 [ext_resource type="TileSet" uid="uid://fbb0w786l7mf" path="res://playfield.tres" id="2_s8ler"]
 [ext_resource type="PackedScene" uid="uid://l8p3ypsx586j" path="res://market_board.tscn" id="4_s8ler"]
+[ext_resource type="Theme" uid="uid://la0l0jlvrh3d" path="res://assets/alagard_theme.tres" id="5_tf0vp"]
+[ext_resource type="AudioStream" uid="uid://6p2x50awcuxc" path="res://assets/brew1.wav" id="5_xssgh"]
+[ext_resource type="AudioStream" uid="uid://cctaf0g2ul6qf" path="res://assets/brew2.wav" id="6_gwbym"]
+[ext_resource type="AudioStream" uid="uid://72knrso1ac0x" path="res://assets/brew3.wav" id="7_tf0vp"]
 [ext_resource type="Theme" uid="uid://bje3v5nx1eag" path="res://assets/uncial.tres" id="7_xssgh"]
+[ext_resource type="AudioStream" uid="uid://c6ihjd1nh84io" path="res://assets/464919__plasterbrain__fantasy-loop-mystical-journey.wav" id="8_gwbym"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_m6oq0"]
+streams_count = 3
+stream_0/stream = ExtResource("5_xssgh")
+stream_1/stream = ExtResource("6_gwbym")
+stream_2/stream = ExtResource("7_tf0vp")
 
 [node name="Playfield" type="Node2D"]
 script = ExtResource("1_s8ler")
@@ -20,9 +31,9 @@ unique_name_in_owner = true
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 718.0
+offset_left = 697.0
 offset_top = 2.0
-offset_right = 758.0
+offset_right = 737.0
 offset_bottom = 2.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -30,11 +41,11 @@ grow_vertical = 1
 [node name="ScoreBoard" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 743.0
-offset_top = 481.0
-offset_right = 784.0
-offset_bottom = 521.0
-theme = ExtResource("7_xssgh")
+offset_left = 660.0
+offset_top = 466.0
+offset_right = 701.0
+offset_bottom = 506.0
+theme = ExtResource("5_tf0vp")
 
 [node name="PanelContainer" type="PanelContainer" parent="ScoreBoard"]
 layout_mode = 0
@@ -75,13 +86,13 @@ text = "Week"
 unique_name_in_owner = true
 layout_mode = 2
 text = "1
-/20"
+/15"
 horizontal_alignment = 1
 
 [node name="PassTimeButton" type="Button" parent="ScoreBoard/PanelContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "NEXT WEEK [SPC]"
+text = "NEXT WEEK (SPC)"
 
 [node name="BrewTip" type="PanelContainer" parent="."]
 unique_name_in_owner = true
@@ -92,12 +103,12 @@ anchor_bottom = 1.0
 offset_left = 146.0
 offset_top = 403.0
 offset_right = 448.0
-offset_bottom = 623.0
+offset_bottom = 569.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 mouse_filter = 2
-theme = ExtResource("7_xssgh")
+theme = ExtResource("5_tf0vp")
 
 [node name="CenterContainer" type="VBoxContainer" parent="BrewTip"]
 custom_minimum_size = Vector2(200, 0)
@@ -337,7 +348,111 @@ layout_mode = 2
 disabled = true
 text = "BREW [RMB]"
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 0.67451)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 436.0
+offset_right = 494.0
+offset_bottom = 537.0
+text = "Choose two flowers to brew into a potion.
+The two flowers's three different genes will be added 
+together, then multiplied to get your multiplier. This 
+is multiplied by the base score to get a price."
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 47.0
+offset_right = 375.0
+offset_bottom = 148.0
+text = "When the week is passed, any empty
+space adjacent to an adult flower will
+germinate a sprout. The sprout's genes
+are taken from the plants adajacent to it."
+
+[node name="Label3" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 732.0
+offset_top = 113.0
+offset_right = 1076.0
+offset_bottom = 188.0
+text = "The price of each potion changes each week.
+In addition, you can see whether the next
+week's price will be higher or lower."
+
+[node name="Label5" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 748.0
+offset_top = 269.0
+offset_right = 1092.0
+offset_bottom = 344.0
+text = "Hover over a plant to see its genes.
+Hover over a potion name to see all the
+flowers with those genes."
+
+[node name="Label4" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 741.0
+offset_top = 544.0
+offset_right = 1107.0
+offset_bottom = 567.0
+text = "Prune your garden for the best genes, and score
+as much gold as you can in fifteen weeks!"
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 592.0
+offset_right = 595.0
+offset_bottom = 623.0
+text = "Continue >>"
+
+[node name="Bubble" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_m6oq0")
+
+[node name="GameOverScreen" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_right = 1151.0
+offset_bottom = 648.0
+theme = ExtResource("7_xssgh")
+color = Color(0.0588235, 0.0588235, 0.0588235, 0.462745)
+
+[node name="Label" type="Label" parent="GameOverScreen"]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 159.0
+offset_right = 881.0
+offset_bottom = 326.0
+theme_override_font_sizes/font_size = 128
+text = "Game Over!"
+
+[node name="GameOverScore" type="Label" parent="GameOverScreen"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 435.0
+offset_top = 335.0
+offset_right = 599.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 64
+text = "Score: "
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_gwbym")
+volume_db = -10.265
+autoplay = true
+
 [connection signal="potion_hovered" from="MarketBoard" to="." method="_on_market_board_potion_hovered"]
 [connection signal="potion_unhovered" from="MarketBoard" to="." method="_on_market_board_potion_unhovered"]
 [connection signal="pressed" from="ScoreBoard/PanelContainer/VBoxContainer/PassTimeButton" to="." method="_on_pass_time_button_pressed"]
 [connection signal="pressed" from="BrewTip/CenterContainer/BrewButton" to="." method="_on_brew_button_pressed"]
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="gui_input" from="GameOverScreen" to="." method="_on_game_over_screen_gui_input"]

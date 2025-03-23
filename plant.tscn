@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://brw1qj2i2c2d6"]
+[gd_scene load_steps=11 format=3 uid="uid://brw1qj2i2c2d6"]
 
 [ext_resource type="Script" uid="uid://dxcjb5ivrjr4f" path="res://plant.gd" id="1_k54vv"]
 [ext_resource type="Texture2D" uid="uid://bfqu0xkxqjg5a" path="res://assets/adult_stem.png" id="2_5o73s"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c56eg8em8spub" path="res://assets/center_flower.png" id="4_t2kmy"]
 [ext_resource type="Texture2D" uid="uid://d0ads5xbuf6e7" path="res://assets/right_flower.png" id="5_o882y"]
 [ext_resource type="Texture2D" uid="uid://bs681dvw48l74" path="res://assets/left_flower.png" id="6_668is"]
+[ext_resource type="Theme" uid="uid://la0l0jlvrh3d" path="res://assets/alagard_theme.tres" id="8_uc8tw"]
 
 [sub_resource type="Curve2D" id="Curve2D_5o73s"]
 _data = {
@@ -93,15 +94,15 @@ texture = ExtResource("5_o882y")
 
 [node name="TooltipLayer" type="CanvasLayer" parent="."]
 layer = 3
-visible = false
 
 [node name="Tooltip" type="ColorRect" parent="TooltipLayer"]
 offset_left = 16.0
 offset_top = -35.0
-offset_right = 270.0
+offset_right = 308.0
 offset_bottom = 55.0
 size_flags_horizontal = 3
 mouse_filter = 2
+theme = ExtResource("8_uc8tw")
 color = Color(0.266575, 0.266575, 0.266575, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="TooltipLayer/Tooltip"]
@@ -179,14 +180,14 @@ layout_mode = 2
 
 [node name="IceProgress" type="ProgressBar" parent="TooltipLayer/Tooltip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer"]
 unique_name_in_owner = true
-modulate = Color(0, 0.780392, 0.745098, 1)
+modulate = Color(0, 1, 1, 1)
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 rounded = true
 
 [node name="Label" type="Label" parent="TooltipLayer/Tooltip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.564706, 0.564706, 1)
+theme_override_colors/font_color = Color(0, 1, 1, 1)
 text = "Ice"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="TooltipLayer/Tooltip/CenterContainer/HBoxContainer/SecondaryBox"]
@@ -194,14 +195,14 @@ layout_mode = 2
 
 [node name="MagicProgress" type="ProgressBar" parent="TooltipLayer/Tooltip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer2"]
 unique_name_in_owner = true
-modulate = Color(0.686275, 0, 0.678431, 1)
+modulate = Color(1, 0, 1, 1)
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 rounded = true
 
 [node name="Label" type="Label" parent="TooltipLayer/Tooltip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.564706, 0, 0.564706, 1)
+theme_override_colors/font_color = Color(1, 0, 1, 1)
 text = "Magic"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="TooltipLayer/Tooltip/CenterContainer/HBoxContainer/SecondaryBox"]
@@ -209,14 +210,14 @@ layout_mode = 2
 
 [node name="EarthProgress" type="ProgressBar" parent="TooltipLayer/Tooltip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer3"]
 unique_name_in_owner = true
-modulate = Color(0.752941, 0.729412, 0, 1)
+modulate = Color(1, 1, 0, 1)
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 rounded = true
 
 [node name="Label" type="Label" parent="TooltipLayer/Tooltip/CenterContainer/HBoxContainer/SecondaryBox/HBoxContainer3"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
 text = "Earth"
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]

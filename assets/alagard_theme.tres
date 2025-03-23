@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://la0l0jlvrh3d"]
+
+[ext_resource type="FontFile" uid="uid://dsk8xj77gy1iy" path="res://assets/alagard.ttf" id="1_7xgub"]
+
+[resource]
+default_font = ExtResource("1_7xgub")
+default_font_size = 23
